@@ -198,7 +198,7 @@ combomover:SetAlpha(0)
 eComboBar:SetMovable(true)
 eComboBar:SetUserPlaced(true)
 local move = false
-local function showmovebutton()
+local function movecombo()
 	if move == false then
 		move = true
 		combomover:SetAlpha(1)
@@ -212,5 +212,5 @@ local function showmovebutton()
 		eComboBar:EnableMouse(false)
 	end
 end
-SLASH_SHOWMOVEBUTTON1 = "/cp"
-SlashCmdList["SHOWMOVEBUTTON"] = showmovebutton
+SLASH_MOVECOMBO1 = "/cp"
+SlashCmdList["MOVECOMBO"] = movecombo
