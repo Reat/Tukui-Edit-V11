@@ -1,4 +1,4 @@
-if not TukuiCF["Unitframes"].enable or TukuiDB.myclass ~= "SHAMAN" then return end
+if TukuiCF.Unitframes.enable ~= true or TukuiDB.myclass ~= "SHAMAN" then return end
 --[[
 	Documentation:
 	

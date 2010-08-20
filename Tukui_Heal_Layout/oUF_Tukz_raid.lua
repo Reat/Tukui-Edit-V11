@@ -44,6 +44,7 @@ local function Shared(self, unit)
 	local healthBorder = CreateFrame("Frame", nil, health)
 	TukuiDB.CreateUFBorder(healthBorder, 1, 1, "TOPLEFT", 0, 0)
 	healthBorder:SetAllPoints()
+	healthBorder:SetFrameLevel(20)
 	
 	local power = CreateFrame("StatusBar", nil, self)
 	power:SetHeight(TukuiDB.Scale(4))
@@ -60,7 +61,7 @@ local function Shared(self, unit)
 	local powerBorder = CreateFrame("Frame", nil, power)
 	TukuiDB.CreateUFBorder(powerBorder, 1, 1, "TOPLEFT", 0, 0)
 	powerBorder:SetAllPoints()
-		
+	
 	local name = TukuiDB.SetFontString(health, font, 12)
 	name:SetPoint("CENTER", 0, TukuiDB.mult)
 	
@@ -104,7 +105,7 @@ local function Shared(self, unit)
 	self.Power.border = power.border
 
 	self.Name = name
-
+	
 	if Unitframes.aggro then
 		table.insert(self.__elements, TukuiDB.UpdateThreat)
 		self:RegisterEvent('PLAYER_TARGET_CHANGED', TukuiDB.UpdateThreat)
@@ -150,6 +151,15 @@ local function Shared(self, unit)
 	if Unitframes.aurawatch then
 		TukuiDB.createAuraWatch(self,unit)
     end
+
+	if Unitframes.healcomm then
+		self.HealCommBar = CreateFrame('StatusBar', nil, health)
+		self.HealCommBar:SetAllPoints()
+		self.HealCommBar:SetStatusBarTexture(health:GetStatusBarTexture():GetTexture())
+		self.HealCommBar:SetStatusBarColor(0, 1, 0, 0.50)
+		self.HealCommBar:SetPoint('LEFT', health, 'LEFT')
+		self.allowHealCommOverflow = Unitframes.showoverflow
+	end
 
 	-- NEED TO DO!
 	-- LFD icons

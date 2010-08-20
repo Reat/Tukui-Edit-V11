@@ -25,7 +25,7 @@ local function GetFormattedTime(s)
 		return format("%dh", ceil(s / 3600)), s % 3600
 	elseif s >= 60 then
 		return format("%dm", ceil(s / 60)), s % 60
-	elseif s <= 8 then
+	elseif s <= TukuiCF["Cooldown"].threshold then
 		return format("%.1f", s), s - format("%.1f", s)
 	end
 	return floor(s), s - floor(s)
@@ -45,7 +45,7 @@ local function Timer_OnUpdate(self, elapsed)
 					local time, nextUpdate = GetFormattedTime(remain)
 					self.text:SetText(time)
 					self.nextUpdate = nextUpdate
-					if ceil(remain) > 8 then 
+					if ceil(remain) > TukuiCF["Cooldown"].threshold then 
 						self.text:SetTextColor(1, 1, 1) 
 					else
 						self.text:SetTextColor(.8 , .2, .2) 

@@ -14,15 +14,6 @@
 	<Script file="config\config-media.lua"/>
 	<Script file="config\config-settings.lua"/>
 	
-	<Script file="modules\functions.lua"/>
-	<Script file="modules\launch.lua"/>
-	<Script file="modules\misc.lua"/>
-	<Script file="modules\spincam.lua"/>
-	<Script file="modules\skin.lua"/>
-	<Script file="modules\autodisable.lua"/>
-	<Script file="modules\bind.lua"/>
-	<Script file="modules\invite.lua"/>
-	
 	<Include file="libs\oUF\oUF.xml"/>
 	<Script file="libs\oUF_AuraWatch\oUF_AuraWatch.lua"/>
 	<Script file="libs\oUF_CombatFeedback\oUF_CombatFeedback.lua"/>
@@ -35,6 +26,19 @@
 	<Script file="libs\oUF_ThreatBar\oUF_ThreatBar.lua"/>
 	<Script file="libs\oUF_TotemBar\oUF_TotemBar.lua"/>
 	<Script file="libs\oUF_Trinkets\oUF_Trinkets.lua"/>
+
+	<Script file="modules\functions.lua"/>
+	<Script file="modules\launch.lua"/>
+	<Script file="modules\misc.lua"/>
+	<Script file="modules\spincam.lua"/>
+	<Script file="modules\skin.lua"/>
+	<Script file="modules\autodisable.lua"/>
+	<Script file="modules\bind.lua"/>
+	<Script file="modules\invite.lua"/>
+	<Script file="modules\mounter.lua"/>
+	<Script file="modules\error.lua"/>
+	<Script file="modules\gm.lua"/>
+	<Script file="modules\merchant.lua"/>
 
 	<Script file="scripts\font.lua"/>
 	<Script file="scripts\minimap.lua"/>
@@ -62,12 +66,14 @@
 	<Script file="datatext\avoidance.lua"/>
 	<Script file="datatext\bags.lua"/>
 	<Script file="datatext\crit.lua"/>
+	<Script file="datatext\dps.lua"/>
 	<Script file="datatext\durability.lua"/>
 	<Script file="datatext\fps.lua"/>
 	<Script file="datatext\friends.lua"/>
 	<Script file="datatext\gold.lua"/>
 	<Script file="datatext\guild.lua"/>
 	<Script file="datatext\haste.lua"/>
+	<Script file="datatext\hps.lua"/>
 	<Script file="datatext\memory.lua"/>
 	<Script file="datatext\power.lua"/>
 	<Script file="datatext\time.lua"/>
@@ -86,4 +92,5 @@
 	
 	<Script file="extras\classtimers.lua"/>
 	<Script file="extras\eExpRepBar.lua"/>
+	<Script file="extras\eComboBar.lua"/>
 </Ui>

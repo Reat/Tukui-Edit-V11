@@ -291,6 +291,31 @@ local Shared = function(self, unit)
 				druidMana:SetTextColor(1, 0.49, 0.04)
 				self.DruidMana = druidMana
 			end
+			
+			if (Unitframes.showthreat) then
+				local ThreatBar = CreateFrame("StatusBar", self:GetName()..'_ThreatBar', TukuiDataLeft)
+				ThreatBar:SetPoint("TOPLEFT", TukuiDataLeft, TukuiDB.Scale(2), TukuiDB.Scale(-2))
+				ThreatBar:SetPoint("BOTTOMRIGHT", TukuiDataLeft, TukuiDB.Scale(-2), TukuiDB.Scale(2))
+				
+				ThreatBar:SetStatusBarTexture(empath)
+				ThreatBar:GetStatusBarTexture():SetHorizTile(false)
+				ThreatBar:SetBackdrop(backdrop)
+				ThreatBar:SetBackdropColor(0, 0, 0, 0)
+			   
+				ThreatBar.Text = TukuiDB.SetFontString(ThreatBar, font, 12)
+				ThreatBar.Text:SetPoint("RIGHT", ThreatBar, "RIGHT", TukuiDB.Scale(-30), 0 )
+			
+				ThreatBar.Title = TukuiDB.SetFontString(ThreatBar, font, 12)
+				ThreatBar.Title:SetText(tukuilocal.unitframes_ouf_threattext)
+				ThreatBar.Title:SetPoint("LEFT", ThreatBar, "LEFT", TukuiDB.Scale(30), 0 )
+			
+				ThreatBar.bg = ThreatBar:CreateTexture(nil, 'BORDER')
+				ThreatBar.bg:SetAllPoints(ThreatBar)
+				ThreatBar.bg:SetTexture(0.1,0.1,0.1)
+			   
+				ThreatBar.useRawThreat = false
+				self.ThreatBar = ThreatBar
+			end
 		end
 
 		-- setup castbar for player and target
@@ -1121,7 +1146,7 @@ local Shared = function(self, unit)
 	RaidIcon:SetWidth(14)
 	RaidIcon:SetPoint("TOP", 0, 8)
 	self.RaidIcon = RaidIcon
-	
+
 	return self
 end
 

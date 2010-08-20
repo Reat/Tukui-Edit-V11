@@ -1,4 +1,5 @@
-if not TukuiCF["Unitframes"].enable or not TukuiCF["Unitframes"].combatfeedback then return end
+if TukuiCF.Unitframes.enable ~= true or TukuiCF.Unitframes.combatfeedback ~= true then return end
+
 if not oUF then return end
 
 local damage_format = "-%d"

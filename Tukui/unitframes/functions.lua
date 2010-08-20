@@ -273,7 +273,7 @@ end
 function TukuiDB.PostCreateAura(element, button)
 	TukuiDB.SetTemplate(button)
 	
-	button.remaining = TukuiDB.SetFontString(button, TukuiCF["Fonts"].font, 12, "THINOUTLINE")
+	button.remaining = TukuiDB.SetFontString(button, TukuiCF["Fonts"].font, Unitframes.auratextscale, "THINOUTLINE")
 	button.remaining:SetPoint("CENTER", TukuiDB.Scale(0), TukuiDB.mult)
 	
 	button.cd.noOCC = true		 	-- hide OmniCC CDs

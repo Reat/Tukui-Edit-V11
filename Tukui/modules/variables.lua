@@ -1,5 +1,5 @@
-TukuiDB = { }
 TukuiCF = { }
+TukuiDB = { }
 tukuilocal = { }
 
 TukuiDB.dummy = function() return end

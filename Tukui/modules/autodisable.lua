@@ -15,6 +15,8 @@ if TukuiDB.lowversion then
 else
 	if TukuiCF["Unitframes"].healermode then
 		TukuiCF["Unitframes"].charportrait = false
+		DisableAddOn("Tukui_Dps_Layout")
+		EnableAddOn("Tukui_Heal_Layout")
 	end
 end
 

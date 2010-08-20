@@ -1,4 +1,4 @@
-if not TukuiCF["Unitframes"].enable then return end
+if TukuiCF.Unitframes.enable ~= true then return end
 
 --[[
 

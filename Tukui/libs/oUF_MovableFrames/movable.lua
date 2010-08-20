@@ -1,4 +1,4 @@
-if not TukuiCF["Unitframes"].enable then return end
+if TukuiCF.Unitframes.enable ~= true then return end
 if not oUF then return end
 
 local _, ns = ...
@@ -305,7 +305,7 @@ do
 
 	function frame:VARIABLES_LOADED()
 		-- I honestly don't trust the load order of SVs.
-		if TukuiCF["Unitframes"].positionbychar then
+		if TukuiCF.Unitframes.positionbychar then
 			if (TukuiUFpos == nil) then TukuiUFpos = {} end
 			_DB = TukuiUFpos or {}
 			TukuiUFpos = _DB
@@ -407,7 +407,7 @@ end
 
 -- reset data
 local function RESETUF()
-	if TukuiCF["unitframes"].positionbychar == true then
+	if TukuiCF.Unitframes.positionbychar == true then
 		TukuiUFpos = {}
 	else
 		TukuiData.ufpos = {}
@@ -680,7 +680,7 @@ do
 
 	function frame:VARIABLES_LOADED()
 		-- I honestly don't trust the load order of SVs.
-		if TukuiCF["unitframes"].positionbychar == true then
+		if TukuiCF.Unitframes.positionbychar == true then
 			if (TukuiUFpos == nil) then TukuiUFpos = {} end
 			_DB = TukuiUFpos or {}
 			TukuiUFpos = _DB
@@ -776,7 +776,7 @@ end
 
 -- reset data
 local function RESETUF()
-	if TukuiCF["unitframes"].positionbychar == true then
+	if TukuiCF.Unitframes.positionbychar == true then
 		TukuiUFpos = {}
 	else
 		TukuiData.ufpos = {}

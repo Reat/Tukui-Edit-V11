@@ -29,6 +29,7 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 			"VideoOptionsFrame",
 			"AudioOptionsFrame",
 			"LFDDungeonReadyStatus",
+			"TicketStatusFrameButton",
 		}
 		
 		local insetskins = {

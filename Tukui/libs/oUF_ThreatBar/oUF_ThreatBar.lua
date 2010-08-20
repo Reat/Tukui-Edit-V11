@@ -1,4 +1,4 @@
-if not TukuiCF["Unitframes"].enable or not TukuiCF["Unitframes"].showthreat then return end
+if TukuiCF.Unitframes.enable ~= true or TukuiCF.Unitframes.showthreat ~= true then return end
 --[[
 	Elements handled:
 	.ThreatBar - StatusBar
@@ -46,7 +46,7 @@ local function update(self, event, unit)
 		else
 			self:SetStatusBarColor(unpack(self.Colors[3]))
 		end
-				
+		
 		if (threatval > 0) and (ThreatNumRaid > 0 or ThreatNumParty > 0 or ThreatPet == 1) then
 			self:SetAlpha(1)
 		else
